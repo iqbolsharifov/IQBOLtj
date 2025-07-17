@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+  <meta charset="UTF-8">
+  <title>Шахсони Машҳур</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #4A90E2;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+    nav {
+      text-align: center;
+      background: #ddd;
+      padding: 10px;
+    }
+    nav button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      background: #4A90E2;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    nav button:hover {
+      background: #357ABD;
+    }
+    .content {
+      display: none;
+      padding: 20px;
+    }
+    .content.active {
+      display: block;
+    }
+    h2 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Маълумот дар бораи Шахсони Машҳур</h1>
+</header>
+
+<nav>
+  <button onclick="showTab('shaxs')">Шахсони Машҳур</button>
+  <button onclick="showTab('shoiron')">Шоирон</button>
+  <button onclick="showTab('navisandagon')">Нависандагон</button>
+  <button onclick="showTab('futboliston')">Футболистон</button>
+  <button onclick="showTab('saroyandagon')">Сарояндагон</button>
+</nav>
+
+<div id="shaxs" class="content active">
+  <h2>Шахсони Машҳур</h2>
+  <p><b>Илон Маск:</b> Соҳибкори амрикоиву африқоӣ, муассиси Tesla ва SpaceX.</p>
+  <p><b>Маликаи Англия:</b> Елизавета II - яке аз монархҳои маъруфи ҷаҳон буд.</p>
+</div>
+
+<div id="shoiron" class="content">
+  <h2>Шоирон</h2>
+  <p><b>Рӯдакӣ:</b> Падари адабиёти форсӣ, шоири асри 9-10.</p>
+  <p><b>Лоиқ Шералӣ:</b> Шоири тоҷик, муосири шеъри тоҷикӣ.</p>
+</div>
+
+<div id="navisandagon" class="content">
+  <h2>Нависандагон</h2>
+  <p><b>Садриддин Айнӣ:</b> Адиби бузурги тоҷик, муассиси адабиёти муосири тоҷик.</p>
+  <p><b>Фёдор Достоевский:</b> Нависандаи машҳури рус, муаллифи "Ҷиноят ва ҷазо".</p>
+</div>
+
+<div id="futboliston" class="content">
+  <h2>Футболистон</h2>
+  <p><b>Лионел Месси:</b> Яке аз беҳтарин футболбозони ҷаҳон, барандаи чандин "Ballon d'Or".</p>
+  <p><b>Криштиану Роналду:</b> Номдори футболи Португалия ва ҷаҳон.</p>
+</div>
+
+<div id="saroyandagon" class="content">
+  <h2>Сарояндагон</h2>
+  <p><b>Шабнами Сурайё:</b> Сарояндаи машҳури тоҷик.</p>
+  <p><b>Ариана Гранде:</b> Ситораи мусиқии поп аз Амрико.</p>
+</div>
+
+<script>
+  function showTab(tabId) {
+    let contents = document.querySelectorAll('.content');
+    contents.forEach(c => c.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
